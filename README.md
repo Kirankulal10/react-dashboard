@@ -88,3 +88,4 @@ VITE_BASE_PATH=/your-base-path/
 - The active local workflow is `npm install` + `npm run dev`; there is no `npm start` script in this template.
 - `yarn.lock` may still exist from the original project history, but the active workflow is `npm`.
 Learning Git and CI/CD
+Learning  Git and CI/CD
