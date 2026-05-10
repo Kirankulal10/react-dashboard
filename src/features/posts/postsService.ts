@@ -50,7 +50,7 @@ export const createPostRecord = async ({ title, content }: NewPostInput): Promis
   await delay(300);
 
   const nextPost: PostRecord = {
-    id: crypto.randomUUID(),
+    id: Math.random().toString(36).substring(2, 15),
     title: title.trim(),
     content: content.trim(),
     updatedAt: new Date().toISOString(),
