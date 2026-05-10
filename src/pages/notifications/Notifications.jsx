@@ -36,7 +36,7 @@ const Notifications = () => {
     toast.success('Showing a success message worked as expected.', options);
 
   const addInfoNotification = () => {
-    const id = crypto.randomUUID();
+    const id = Math.random().toString(36).substring(2, 15);
 
     toast.info(
       <div className="d-flex flex-column align-items-center">
@@ -62,7 +62,7 @@ const Notifications = () => {
   };
 
   const addErrorNotification = () => {
-    const id = crypto.randomUUID();
+    const id = Math.random().toString(36).substring(2, 15);
 
     toast.error(
       <div className="d-flex flex-column align-items-center">
