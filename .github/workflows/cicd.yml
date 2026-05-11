@@ -30,13 +30,15 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           source: "dist/*"
-          target: "/var/www/html"
+          target: "/home/ubuntu/"
 
-      - name: Restart Nginx
+      - name: Move files to Nginx folder
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            sudo rm -rf /var/www/html/*
+            sudo cp -r /home/ubuntu/dist/* /var/www/html/
             sudo systemctl restart nginx
