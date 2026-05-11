@@ -39,6 +39,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo rm -rf /var/www/html/app/*
-            sudo cp -r /home/ubuntu/dist/* /var/www/html/app/*
+            sudo cp -r /home/ubuntu/dist/* /var/www/html/app/
             sudo systemctl restart nginx
