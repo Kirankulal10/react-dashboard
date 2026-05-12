@@ -89,7 +89,7 @@ const Dashboard = () => {
         <BreadcrumbItem>YOU ARE HERE</BreadcrumbItem>
         <BreadcrumbItem active>Dashboard</BreadcrumbItem>
       </Breadcrumb>
-      <h1 className="mb-lg">Dashboard using CI/CD new</h1>
+      <h1 className="mb-lg">Dashboard using CI/CD new to dev</h1>
       <Row>
         <Col md={6} sm={12}>
           <Widget
